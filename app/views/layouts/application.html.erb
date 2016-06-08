@@ -7,29 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  <header class="navbar navbar-fixed-top navbar-default">
-  <div class="container">
-    <%= link_to "My portfolio", "", class: "btn btn-lg btn-success", id: "logo" %>
-   
-     <div class="nav-item">
-       <%= link_to "Link 1", "", class: "btn btn-primary" %>
-    </div>
-     <div class="nav-item">
-       <%= link_to "Link 2", "", class: "btn btn-primary" %>
-    </div>
-     <div class="nav-item">
-       <%= link_to "Link 3", "", class: "btn btn-primary" %>
-    </div>
-  
-    
-  </header>  
+ 
+ <%= render 'layouts/navigation' %> 
+ 
   <div class="container"> 
-
     <%= yield %>
-    <div class="footer">
-      <p>&copy; MyPortfolio <%= Time.now.year %> </p>
-    </div>  
+    
+    <%= render 'layouts/footer' %>
+        
    </div>
 </body>
 </html>
